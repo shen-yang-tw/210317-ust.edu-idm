@@ -1,0 +1,86 @@
+{{!-- {{>header shadow='true' hrefForAA='true' topNav='true' textSize='true' logoRightNav='true' mainMenu='true' 01active='true' tw-borderHR='true' iconLogin='true' modal='true'}} --}}
+
+<!-- header -->
+<header{{#if shadow}} class="tw-shadow" {{/if}}>
+	<div class="tw-bg-white uk-sticky" uk-sticky="media: (max-width: 959px); cls-active: tw-shadow tw-bg-white">
+		<nav>
+			<!-- logo & sideLinks -->
+			<div class="tw-relative tw-shadow">
+				{{!-- <div class="bg-white tw-opacity-85 uk-position-cover"></div> --}}
+				<div class="tw-px-4 tw-py-1 m:tw-py-2 uk-container">
+					<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+						<div class="logo">
+							<h1 class="tw-m-0 uk-flex uk-flex-middle">
+								<a class="logo" href="index.html" title="{{title}}">
+									<img class="max_width-2/3@m uk-preserve" data-src="img/nthu-logo.svg" data-width data-height alt="{{title}}" uk-img uk-svg>
+								</a>
+							</h1>
+						</div>
+						{{#if logoRightNav}}
+							<div class="tw-m-0 tw-relative uk-width-auto">
+								<div class="sub_nav tw-space-x-3 uk-flex uk-flex-middle">
+									{{#if hrefForAA}}
+										<span class="uk-visible@m"><a class="tw-text-base tw-px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
+									{{/if}}
+									<span><a href="#">圖書館</a></span>
+									<div class="uk-inline">
+										<button class="tw-border-none tw-text-lg" type="button" title="語言切換"><i class="-tw-mb-1 fas fa-language fa-lg"></i><span class="tw-sr-only">語言切換</span></button>
+										<div class="min_width-50 uk-dropdown" uk-dropdown="">
+											<ul class="uk-nav uk-dropdown-nav">
+												<li><a class="hover:tw-underline tw-py-2" href="#">日文</a></li>
+												<li><a class="hover:tw-underline tw-py-2" href="#">English</a></li>
+											</ul>
+										</div>
+									</div>
+									{{!-- <span class="tw-text-white">|</span> --}}
+									{{#if textSize}}
+										<span class="text_size text_size-s hover_bg"><button class="tw-text-white tw-px-2 uk-button" type="button" title="縮小字級">A-</button></span>
+										<span class="text_size text_size-m hover_bg active"><button class="tw-text-white tw-px-2 uk-button" type="button" title="適中字級">A</button></span>
+										<span class="text_size text_size-l hover_bg"><button class="tw-text-white tw-px-2 uk-button" type="button" title="加大字級">A+</button></span>
+									{{/if}}
+									{{#if iconLogin}}
+										<span><button class="color_primary tw-border-none l:tw-pr-0 uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-tw-mb-1 fas fa-user-circle fa-lg"></i></button></span>
+										<div class="min_width-50 uk-dropdown" uk-dropdown>
+											<ul class="uk-nav uk-dropdown-nav">
+												<li><a class="hover:underline tw-py-2" href="#password" uk-toggle>修改密碼</a></li>
+												<li><a class="hover:underline tw-py-2" href="#register" uk-toggle>註冊</a></li>
+												<li><a class="hover:underline tw-py-2" href="#login" uk-toggle>登入</a></li>
+												<li><a class="hover:underline tw-py-2" href="index.html">登出</a></li>
+											</ul>
+										</div>
+									{{/if}}
+								</div>
+							</div>
+						{{/if}}
+						{{!-- <div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
+							{{#if iconLogin}}
+								<div class="uk-inline">
+									<button class="color_primary tw-border-none tw-h-full uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-tw-mb-1 fas fa-user-circle fa-lg"></i></button>
+									<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
+										<ul class="uk-nav uk-dropdown-nav">
+											<li><a class="hover:underline tw-py-2" href="#password" uk-toggle>修改密碼</a></li>
+											<li><a class="hover:underline tw-py-2" href="#register" uk-toggle>註冊</a></li>
+											<li><a class="hover:underline tw-py-2" href="#login" uk-toggle>登入</a></li>
+											<li><a class="hover:underline tw-py-2" href="index.html">登出</a></li>
+										</ul>
+									</div>
+								</div>
+							{{/if}}
+							<button class="min_width-30! color_primary tw-px-0 uk-flex uk-flex-right uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas"><span class="sr-only">選單</span></button>
+						</div> --}}
+					</div>
+				</div>
+			</div>
+			<!-- /logo & sideLinks -->
+		</nav>
+	</div>
+	<div class="min_height-100 min_height-200@m m:tw-mb-6 uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src="img/banner.png" uk-img>
+		<h2 class="tw-w-full tw-relative tw-text-center tw-p-2 tw-m-0 tw-text-xl tw-font-bold">
+			<div class="tw-opacity-70 tw-text-black tw-bg-gradient-to-r tw-from-transparent tw-via-white tw-to-transparent uk-position-cover"></div>
+			<div class="tw-relative">
+				系統登入服務<span class="eng tw-text-xs m:tw-text-base tw-ml-1">System Login Service</span>
+			</div>
+		</h2>
+	</div>
+	</header>
+	<!-- /header -->

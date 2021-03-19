@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="tw-text-m" lang="zh-Hant">
+
+	{{!-- First edit the title of the templateData in the gulp.task('templates') of gulpfile.js.
+	The title will be changed to {{title}} in all hbs --}}
+
+	<head>
+		{{!-- {{>meta bootstrap='true' bootstrap4='true' jquery='true' editor='true' }} --}}
+		{{>meta}}
+	</head>
+
+	<body id="top" class="{{#if bodyClass}}index{{/if}}{{#if bodyFocus}} focus{{/if}}">
+		{{>header hrefForAA='true' logoRightNav='true' mainMenu='true' menuTitle1='' menuTitle2='' menuTitle3='' menuTitle4='' menuTitle5='' menuTitle6='' menuTitle6IsLink='true' menuTitle6link=''}}
+
+		{{>indexContent hrefForAA='true' 2and1of3col='true'}}
+
+		{{>footer hrefForAA='true'}}
+
+		{{#if jqueryBody}}
+		<!-- jq:js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+		{{#if bootstrapBody}}
+		<!-- bs:js -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+	</body>
+
+</html>

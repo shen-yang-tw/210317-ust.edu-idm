@@ -1,0 +1,551 @@
+{{!-- {{>listMenu bootstrap='' titleIsLink='' bg='' listMenuMaxHeight='true' listMenuVisibleOnDesktop='true' widthFullMobile='true' titleIsLink='true' level1='true' optionSum='true' more='true'}} --}}
+
+<!-- listMenu -->
+{{#if bootstrap}}
+	{{#if titleIsLink}}
+		{{#if bg}}
+			{{!-- Need CSS&  JS: clickAccordionToggleChildrenClasses('.list_accordion .arrow', '', 'ul.toggle', 'li.py-1', '.toggle', ['tw-hidden']); --}}
+			<div class="list_accordion{{#if listMenuMaxHeight}} max_height-200 max_height-700@m overflow-auto{{/if}} bg-dark p-4{{#if listMenuVisibleOnDesktop}} d-none d-lg-block{{/if}}">
+				<ul class="list-unstyled">
+					{{#if level1}}
+						<li class="py-1"><a class="text-white" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+					{{/if}}
+					{{#if level2}}
+						<li class="py-1">
+							<div class="d-flex flex-nowrap justify-content-between">
+								<a class="text-white d-flex flex-grow-1 align-items-center" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<a class="arrow tw-pt-px tw-w-16 d-flex flex-shrink-1 align-items-start justify-content-end" href="javascript:void(0)" title="展開/收合選單"><span class="toggle text-white fas fa-angle-right"></span><span class="toggle tw-hidden text-white fas fa-angle-down"></span></a>
+							</div>
+							<ul class="toggle tw-hidden list-unstyled pl-4">
+								<li class="py-1"><a class="text-white" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+								<li class="py-1"><a class="text-white" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							</ul>
+						</li>
+					{{/if}}
+					{{#if level3}}
+						<li class="py-1">
+							<div class="d-flex flex-nowrap justify-content-betweenn">
+								<a class="text-white d-flex flex-grow-1 align-items-centerr" href="#">Level3{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<a class="arrow tw-pt-px tw-w-16 d-flex flex-shrink-1 align-items-start justify-content-end" href="javascript:void(0)" title="展開/收合選單"><span class="toggle text-white fas fa-angle-right"></span><span class="toggle tw-hidden text-white fas fa-angle-down"></span></a>
+							</div>
+							<ul class="toggle tw-hidden list-unstyled pl-4">
+								<li class="py-1">
+									<a class="text-white" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+									<ul class="list-unstyled pl-4">
+										<li class="py-1"><a class="text-white" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="py-1"><a class="text-white" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="py-1"><a class="text-white" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					{{/if}}
+					{{#if others}}
+						<li class="dropdown-divider"></li>
+						<li class="py-1"><a class="text-white" href="index.html">首頁</a></li>
+						<li class="py-1"><a class="text-white" href="#">Item</a></li>
+						<li class="py-1"><a class="text-white" href="#">English</a></li>
+					{{/if}}
+				</ul>
+			</div>
+		{{else}}
+			{{!-- Need JS: clickToggleChildrenClasses('.list_accordion .arrow', 'li.py-1', '.toggle', 'tw-hidden'); --}}
+			<div class="list_accordion{{#if listMenuMaxHeight}} max_height-200 max_height-700@m overflow-auto{{/if}} p-4{{#if listMenuVisibleOnDesktop}} d-none d-lg-block{{/if}}">
+				<ul class="list-unstyled">
+					{{#if level1}}
+						<li class="py-1">
+							<a class="text-body" href="#">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+						</li>
+					{{/if}}
+					{{#if level2}}
+						<li class="py-1">
+							<div class="d-flex flex-nowrap justify-content-between">
+								<a class="text-body d-flex flex-grow-1 align-items-center" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<a class="arrow tw-pt-px tw-w-16 d-flex flex-shrink-1 align-items-start justify-content-end" href="javascript:void(0)" title="展開/收合選單"><span class="toggle text-body fas fa-angle-right"></span><span class="toggle tw-hidden text-body fas fa-angle-down"></span></a>
+							</div>
+							<ul class="toggle tw-hidden list-unstyled pl-4">
+								<li class="py-1"><a class="text-body" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+								<li class="py-1"><a class="text-body" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+							</ul>
+						</li>
+					{{/if}}
+					{{#if level3}}
+						<li class="py-1">
+							<div class="d-flex flex-nowrap justify-content-betweenn">
+								<a class="text-body d-flex flex-grow-1 align-items-centerr" href="#">Level3{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<a class="arrow tw-pt-px tw-w-16 d-flex flex-shrink-1 align-items-start justify-content-end" href="javascript:void(0)" title="展開/收合選單"><span class="toggle text-body fas fa-angle-right"></span><span class="toggle tw-hidden text-body fas fa-angle-down"></span></a>
+							</div>
+							<ul class="toggle tw-hidden list-unstyled pl-4">
+								<li class="py-1 uk-parent">
+									<a class="text-body" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+									<ul class="list-unstyled pl-4">
+										<li class="py-1"><a class="text-body" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="py-1"><a class="text-body" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="py-1"><a class="text-body" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					{{/if}}
+					{{#if others}}
+						<li class="dropdown-divider"></li>
+						<li class="py-1"><a class="text-body" href="index.html">首頁</a></li>
+						<li class="py-1"><a class="text-body" href="#">Item</a></li>
+						<li class="py-1"><a class="text-body" href="#">English</a></li>
+					{{/if}}
+				</ul>
+			</div>
+		{{/if}}
+	{{else}}
+		{{!-- Need CSS:'.list-group .active' & JS: clickToggleChildrenClasses('.list-group-item', '', '.fas', 'fa-angle-right', 'fa-angle-down'); --}}
+		<div class="list_accordion{{#if listMenuMaxHeight}} max_height-200 max_height-700@m overflow-auto{{/if}} p-4{{#if listMenuVisibleOnDesktop}} d-none d-lg-block{{/if}}">
+			<ul class="list-group">
+				<li class="list-group-item p-0 d-flex justify-content-between align-items-center">
+					<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3" href=""><span>Item_1</span>{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+				</li>
+				<li class="list-group-item p-0">
+					<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3" href="#l2" data-toggle="collapse"><span><i class="mr-1 fas fa-angle-right"></i>Item_2</span>{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+					<ul id="l2" class="rounded-0 collapse">
+						<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+							<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3 tw-pl-12" href="">Item_2_1{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+						</li>
+						<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+							<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3 tw-pl-12" href="">Item_2_2{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+						</li>
+					</ul>
+				</li>
+				<li class="list-group-item p-0">
+					<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3" href="#l3" data-toggle="collapse"><span><i class="mr-1 fas fa-angle-right"></i>Item_3</span>{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+					<ul id="l3" class="rounded-0 collapse">
+						<li class="list-group-item p-0">
+							<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3 tw-pl-12" href="">Item_3_1{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+							<ul class="rounded-0">
+								<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+									<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3 tw-pl-16" href="">Item_3_1_1{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+								</li>
+								<li class="list-group-item p-0 d-flex justify-content-between align-items-center border-0">
+									<a class="list-group-item-action d-flex justify-content-between align-items-center p-2 px-3 tw-pl-16" href="">Item_3_1_2{{#if optionSum}}<span class="badge badge-secondary ml-2">14</span>{{/if}}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul class="list-unstyled list-group list-group-root">
+				{{#if level1}}
+					<li>
+						<a href="#" class="list-group-item list-group-item-action">Item_1</a>
+					</li>
+				{{/if}}
+				{{#if level2}}
+					<li>
+						<a href="#" class="list-group-item list-group-item-action" data-toggle="collapse">
+							<i class="mr-1 fas fa-angle-right"></i>Item_2</a>
+						<ul class="list-unstyled list-group collapse">
+							<li>
+								<a href="#" class="list-group-item list-group-item-action">Item_2_1</a>
+							</li>
+							<li>
+								<a href="#" class="list-group-item list-group-item-action">Item_2_2</a>
+							</li>
+						</ul>
+					</li>
+				{{/if}}
+				{{#if level3}}
+					<li>
+						<a href="#" class="list-group-item list-group-item-action" data-toggle="collapse">
+							<i class="mr-1 fas fa-angle-right"></i>Item_3</a>
+						<ul class="list-unstyled list-group collapse">
+							<li>
+								<a href="#" class="list-group-item list-group-item-action">Item_3_1</a>
+								<ul class="list-unstyled list-group">
+									<li>
+										<a href="#" class="list-group-item list-group-item-action">Item_3_1_1</a>
+									</li>
+									<li>
+										<a href="#" class="list-group-item list-group-item-action">Item_3_1_2</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				{{/if}}
+			</ul>
+		</div>
+	{{/if}}
+	{{#if listMenuVisibleOnDesktop}}
+		<div class="{{#if widthFullMobile}}w-100 {{/if}}d-lg-none">
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">選單</button>
+				{{>dropdown bootstrap='true' level1='true' optionSum=''}}
+			</div>
+		</div>
+	{{/if}}
+{{else}}
+	<div class="listMenu {{#if listMenuMaxHeight}}max_height-200 max_height-700@m uk-overflow-auto{{/if}}{{#if listMenuVisibleOnDesktop}} uk-visible@m{{/if}}">
+		{{#if titleIsLink}}
+			<ul class="list_tabs uk-nav-default">
+				{{#if level1}}
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100">
+						<a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#content">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100">
+						<a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#content">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+				{{/if}}
+				{{#if level2}}
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100">
+						<a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#content">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100">
+						<a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#content">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100 uk-parent">
+						<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
+							<div class="uk-width-expand"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
+							<div class="uk-width-auto"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200 tw-h-full" href="#" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(event, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span class="toggle"></a></div>
+						</div>
+						<ul class="toggle hidden uk-nav-sub tw-p-0 bg-white">
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						</ul>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100 uk-parent">
+						<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
+							<div class="uk-width-expand"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
+							<div class="uk-width-auto"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200 tw-h-full" href="#" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(event, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span class="toggle"></a></div>
+						</div>
+						<ul class="toggle hidden uk-nav-sub tw-p-0 bg-white">
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						</ul>
+					</li>
+				{{/if}}
+				{{#if level3}}
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100">
+						<a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#content">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100">
+						<a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#content">Level1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100 uk-parent">
+						<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
+							<div class="uk-width-expand"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
+							<div class="uk-width-auto"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200 tw-h-full" href="#" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(event, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span class="toggle"></a></div>
+						</div>
+						<ul class="toggle hidden uk-nav-sub tw-p-0 bg-white">
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						</ul>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100 uk-parent">
+						<div class="tw-p-0 uk-grid uk-grid-collapse" uk-grid>
+							<div class="uk-width-expand"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#">Level2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
+							<div class="uk-width-auto"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200 tw-h-full" href="#" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(event, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span class="toggle"></a></div>
+						</div>
+						<ul class="toggle hidden uk-nav-sub tw-p-0 bg-white">
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						</ul>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100 uk-parent uk-open">
+						<div class="tw-p-0 uk-grid uk-grid-collapse active" uk-grid>
+							<div class="uk-width-expand"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#">Level3{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
+							<div class="uk-width-auto"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200 tw-h-full" href="#" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(event, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span class="toggle"></a></div>
+						</div>
+						<ul class="toggle hidden uk-nav-sub tw-p-0 bg-white">
+							<li class="tw-p-0">
+								<a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#content">Title{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<ul class="uk-nav-sub tw-p-0">
+									<li class="tw-p-0 active"><a class="tw-no-underline tw-w-full break-all tw-pl-6 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-6 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-p-0 uk-nav-header hover:bg-gray-100 uk-parent uk-open">
+						<div class="tw-p-0 uk-grid uk-grid-collapse active" uk-grid>
+							<div class="uk-width-expand"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200" href="#">Level3{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></div>
+							<div class="uk-width-auto"><a class="tw-no-underline tw-w-full break-all tw-px-2 hover:bg-gray-200 tw-h-full" href="#" title="展開/收合選單" onclick="toggleAllClass(findChildren(findParent(event, 'LI', ''), '.toggle'), 'hidden'); return false;"><span class="toggle" uk-icon="icon: chevron-right"></span><span class="toggle hidden" uk-icon="icon: chevron-down"></span class="toggle"></a></div>
+						</div>
+						<ul class="toggle hidden uk-nav-sub tw-p-0 bg-white">
+							<li class="tw-p-0">
+								<a class="tw-no-underline tw-w-full break-all tw-pl-4 tw-px-2 hover:bg-gray-200" href="#content">Title{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<ul class="uk-nav-sub tw-p-0">
+									<li class="tw-p-0 active"><a class="tw-no-underline tw-w-full break-all tw-pl-6 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									<li class="tw-p-0"><a class="tw-no-underline tw-w-full break-all tw-pl-6 tw-px-2 hover:bg-gray-200" href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				{{/if}}
+			</ul>
+		{{else}}
+			<ul class="list_tabs list_tabs-icon-active-white uk-nav-parent-icon uk-nav" uk-nav="multiple: true; animation: false">
+				{{#if level1}}
+					<li class="uk-nav-header uk-active">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="uk-nav-header">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="uk-nav-header">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+				{{/if}}
+				{{#if level2}}
+					<li class="uk-nav-header">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="uk-nav-header">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="uk-nav-header uk-parent uk-open">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+						<ul>
+							<li class="uk-active"><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li>
+							<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							{{#if more}}
+								<li>
+									<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+							{{/if}}
+						</ul>
+					</li>
+					<li class="uk-nav-header uk-parent">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+						<ul>
+							<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							{{#if more}}
+								<li>
+									<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+							{{/if}}
+						</ul>
+					</li>
+				{{/if}}
+				{{#if level3}}
+					<li class="uk-nav-header">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="uk-nav-header">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+					</li>
+					<li class="uk-nav-header uk-parent">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+						<ul>
+							<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							{{#if more}}
+								<li>
+									<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+							{{/if}}
+						</ul>
+					</li>
+					<li class="uk-nav-header uk-parent">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+						<ul>
+							<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							{{#if more}}
+								<li>
+									<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+								<li class="listMore hidden">
+									<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								</li>
+							{{/if}}
+						</ul>
+					</li>
+					<li class="uk-nav-header uk-parent uk-open">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+						<ul>
+							<li>
+								<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<ul>
+									<li class="uk-active"><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									<li>
+									<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									{{#if more}}
+										<li>
+											<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+									{{/if}}
+								</ul>
+							</li>
+							<li>
+								<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<ul>
+									<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									<li>
+									<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									{{#if more}}
+										<li>
+											<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+									{{/if}}
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="uk-nav-header uk-parent">
+						<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+						<ul>
+							<li>
+								<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<ul>
+									<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									<li>
+									<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									{{#if more}}
+										<li>
+											<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+									{{/if}}
+								</ul>
+							</li>
+							<li>
+								<a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+								<ul>
+									<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									<li>
+									<li><a class="break-all" href="#content">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									{{#if more}}
+										<li>
+											<a class="listMore tw-text-xs tw-text-right" onclick="toggleAllClass(findChildren(findParent(this, 'LI', 'uk-parent'), '.listMore'), 'hidden'); return false">More</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+										<li class="listMore hidden">
+											<a class="break-all" href="#content">{{!--<i class="fas fa-caret-right fa-fw"></i>--}}subItem{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+										</li>
+									{{/if}}
+								</ul>
+							</li>
+						</ul>
+					</li>
+				{{/if}}
+			</ul>
+		{{/if}}
+		{{!-- <ul class="list_tabs uk-nav-parent-icon uk-nav" uk-nav="multiple: true; animation: false">
+		<li class="active uk-nav-header uk-parent">
+			<a href="#content">內科部<small class="pseudo:parentheses">123</small></a>
+			<ul>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+			</ul>
+		</li>
+		<li class="uk-nav-header uk-parent">
+			<a href="#content">Level2<small class="pseudo:parentheses">123</small></a>
+			<ul>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+				<li><a href="#content">Level2-Item<small class="pseudo:parentheses">123</small></a></li>
+			</ul>
+		</li>
+	</ul> --}}
+	</div>
+	{{#if listMenuVisibleOnDesktop}}
+		<div class="{{#if widthFullMobile}}uk-width-1-1 {{/if}}uk-hidden@m">
+			<button class="uk-button uk-button-default" type="button">選單</button>
+			<div class="min_width-100" uk-dropdown>
+				<ul class="uk-nav uk-dropdown-nav">
+					{{#if level1}}
+						{{!-- <li class="uk-active"><a href="#">Active</a></li> --}}
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						{{!-- <li class="uk-nav-header">Header</li> --}}
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						{{!-- <li class="uk-nav-divider"></li> --}}
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+					{{/if}}
+					{{#if level2}}
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						<li class="uk-parent">
+							<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+								<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							</ul>
+						</li>
+					{{/if}}
+					{{#if level3}}
+						<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+						<li class="uk-parent">
+							<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+								<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+								<li>
+									<a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a>
+									<ul>
+										<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+										<li><a href="#">Item{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs tw-ml-1" title="總數">999</small>{{/if}}</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+	{{/if}}
+{{/if}}
+<!-- listMenu -->

@@ -1,0 +1,122 @@
+{{!-- {{>login formTitleOn=='true' formTitle='' stack='true' stackClass='uk-width-1-2@s' errorOn='true' error='驗證提示語' note='true' noteText='密碼規則說明' loginToHref='#' forgetPsw='true' cancel='true' register='true' contact='true'}} --}}
+<form onsubmit="return false;">
+  {{#if formTitleOn}}
+    <h3>{{formTitle}}</h3>
+  {{/if}}
+  <div class="uk-grid uk-grid-small{{#if stack}} uk-flex-column{{else}} uk-child-width-expand@s{{/if}}" uk-grid>
+    <div class="uk-width-1-1">
+      <legend class="tw-text-xl tw-font-bold">▎讀者聯絡資料確認</legend>
+    </div>
+    <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="w-full" for="add">聯絡地址</label>
+      <input id="add" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+        <p class="color_primary-text s:mt-1 tw-text-small">{{error}}</p>
+      {{/if}}
+    </div>
+    <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="w-full" for="email"><span class="tw-text-red-600 tw-mr-1">*</span>E-mail</label>
+      <input id="email" class="uk-input" type="email" placeholder="">
+      {{#if errorOn}}
+        <p class="color_primary-text s:mt-1 tw-text-small">{{error}}</p>
+      {{/if}}
+    </div>
+    <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="w-full" for="cellphone"><span class="tw-text-red-600 tw-mr-1">*</span>聯絡電話(手機)</label>
+      <input id="cellphone" class="uk-input" type="tel" placeholder="">
+      {{#if errorOn}}
+        <p class="color_primary-text s:mt-1 tw-text-small">{{error}}</p>
+      {{/if}}
+    </div>
+    <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="w-full" for="phone"><span class="tw-text-red-600 tw-mr-1">*</span>聯絡電話(住宅)</label>
+      <input id="phone" class="uk-input" type="tel" placeholder="">
+      {{#if errorOn}}
+        <p class="color_primary-text s:mt-1 tw-text-small">{{error}}</p>
+      {{/if}}
+    </div>
+    <div class="uk-width-1-1">
+      <legend class="tw-text-xl tw-font-bold">▎讀者權益確認</legend>
+    </div>
+    <div class="tw-space-y-3 tw-mx-auto">
+      <p class="tw-m-0 tw-font-bold">1.國立清華大學圖書館借閱權益確認</p>
+      <label class="uk-grid uk-grid-collapse uk-child-width-auto">
+        <div><span class="tw-text-red-600 tw-mr-1">*</span><input class="tw-mr-1 uk-checkbox" type="checkbox"></div>
+        <div class="txt uk-width-expand">我已閱讀<a href="#" class="color_primary-text" uk-toggle="target: #policy">國立清華大學圖書館閱覽規則</a>，並願意遵守各項規定。</div>
+      </label>
+      <label class="uk-grid uk-grid-collapse uk-child-width-auto">
+        <div><span class="tw-text-red-600 tw-mr-1">*</span><input class="tw-mr-1 uk-checkbox" type="checkbox"></div>
+        <div class="txt uk-width-expand">我已閱讀<a href="#" class="color_primary-text" uk-toggle="target: #borrow">國立清華大學圖書館館藏資料借閱規則</a>，並願意遵守各項規定。</div>
+      </label>
+      <label class="uk-grid uk-grid-collapse uk-child-width-auto">
+        <div><span class="tw-text-red-600 tw-mr-1">*</span><input class="tw-mr-1 uk-checkbox" type="checkbox"></div>
+        <div class="txt uk-width-expand">我已閱讀並同意國立清華大學個人資料蒐集告知聲明</div>
+      </label>
+      <p class="tw-m-0 tw-font-bold">2.台灣聯合大學系統(UST)借閱權益確認</p>
+      <label class="uk-grid uk-grid-collapse uk-child-width-auto">
+        <div><input class="tw-mr-1 uk-checkbox" type="checkbox"></div>
+        <div class="txt uk-width-expand">我已閱讀台灣聯合大學系統圖書互借作業要點，並願意遵守各項規定。<span class="eng tw-block">I accept the Circulation Regulations of University System of Taiwan.</span></div>
+      </label>
+      <label class="uk-grid uk-grid-collapse uk-child-width-auto">
+        <div><input class="tw-mr-1 uk-checkbox" type="checkbox"></div>
+        <div class="txt uk-width-expand">我同意提供資料予台灣聯合大學系統合作館，以進行合作閱覽與借還服務，以及因業務執行所必須的各項聯繫、通知、統計分析與異地備份之用。<span class="eng tw-block">I agree to provide personal information to the Libraries of University System of Taiwanfor using the interlibrary reading and circulation services and for making necessary contacts and notifications.</span></div>
+      </label>
+    </div>
+    {{#if captcha}}
+      <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+        <label class="w-full" for="cap">驗證碼</label>
+        <input id="cap" class="uk-input" type="text" placeholder="">
+        {{#if errorOn}}
+          <p class="color_secondary-text s:mt-1 tw-text-red-600 s:mt-1 tw-text-small">{{error}}</p>
+        {{/if}}
+      </div>
+      <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+        <span class="w-full uk-visible@m"></span>
+        <img class="inline-block mr-2" data-src="http://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼" uk-img>
+        <a href="#" title="重新換圖"><i class="fas fa-redo"></i><span class="sr-only">重新換圖</span></a>
+      </div>
+    {{/if}}
+    {{#if note}}
+      <div class="{{#if stack}}mx-auto tw-text-center {{stackClass}}{{else}}uk-width-1-1{{/if}}">
+        <small class="mt-2"><i class="mr-1 fas fa-question-circle"></i>{{noteText}}</small>
+      </div>
+    {{/if}}
+    <div class="m:mt-2 mx-auto uk-width-1-1">
+      <div class="uk-grid uk-grid-small{{#if stack}} uk-flex-column{{else}} uk-child-width-expand{{/if}}" uk-grid>
+        <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} tw-text-nowrap{{/if}}">
+          <a href="{{loginToHref}}" class="btn_primary tw-w-full uk-button uk-button-primary">完成/OK</a>
+        </div>
+        {{#if forgetPsw}}
+          <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} tw-text-nowrap{{/if}}">
+            <a href="#" class="btn_primary tw-w-full uk-button uk-button-primary">忘記密碼</a>
+          </div>
+        {{/if}}
+        {{#if resetPsw}}
+          <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} tw-text-nowrap{{/if}}">
+            <a href="#" class="btn_grey-200 tw-w-full uk-button uk-button-primary">重設密碼</a>
+          </div>
+        {{/if}}
+        {{#if cancel}}
+          <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} tw-text-nowrap{{/if}}">
+            <a href="#" class="w-full uk-button uk-button-default">取消</a>
+          </div>
+        {{/if}}
+        {{!-- {{#if register}}
+        <div class="tw-space-y-1{{#if stack}} mx-auto {{stackClass}}{{else}} tw-text-nowrap{{/if}}">
+          <a href="#register" class="w-full uk-button uk-button-default uk-toggle" uk-toggle>註冊</a>
+        </div>
+        {{/if}} --}}
+      </div>
+      {{#if register}}
+        <small class="mt-2 tw-text-center block">
+          沒有帳戶？<a class="color_primary link_line ml-2 uk-toggle" href="#register" uk-toggle>註冊</a>
+        </small>
+      {{/if}}
+      {{#if contact}}
+        <small class="mt-2 tw-text-center block">忘記帳戶資訊，請聯絡系統管理員<br><a class="color_primary link_line" href="mailto:sherry5473@tmu.edu.tw">sherry5473@tmu.edu.tw</a><br>02-6638-2736 分機 1219</small>
+      {{/if}}
+    </div>
+  </div>
+</form>
+{{>modal-content id='policy' wide='true' modal-title='國立清華大學圖書館閱覽規則'}}
+{{>modal-content id='borrow' wide='true' modal-title='國立清華大學圖書館館藏資料借閱規則'}}

@@ -1,0 +1,65 @@
+{{!-- {{>dropdown bootstrap='' level1='' optionSum='true'}} --}}
+
+<!-- Dropdown -->
+{{#if bootstrap}}
+<div class="dropdown-menu py-0 tw-border-0">
+	<ul class="list-group list-group-root">
+		{{#if level1}}
+		<li>
+			<a href="#" class="list-group-item list-group-item-action">Item_1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+		</li>
+		{{/if}}
+		{{#if level2}}
+		<li>
+			<a href="#" class="list-group-item list-group-item-action">Item_2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+			<ul class="list-group">
+				<li>
+					<a href="#" class="list-group-item list-group-item-action">Item_2_1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+				</li>
+				<li>
+					<a href="#" class="list-group-item list-group-item-action">Item_2_2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+		{{#if level3}}
+		<li>
+			<a href="#" class="list-group-item list-group-item-action">Item_3{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+			<ul class="list-group">
+				<li>
+					<a href="#" class="list-group-item list-group-item-action">Item_3_1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+					<ul class="list-group">
+						<li>
+							<a href="#" class="list-group-item list-group-item-action">Item_3_1_1{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+						</li>
+						<li>
+							<a href="#" class="list-group-item list-group-item-action">Item_3_1_2{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		{{/if}}
+	</ul>
+</div>
+{{else}}
+<div class="min_width-100" uk-dropdown>
+	<ul class="uk-nav uk-dropdown-nav tw-text-left">
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		<li class="tw-px-2 tw-py-1">
+			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="tw-px-2 tw-py-1">
+			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="tw-m-0 uk-nav-header"><span>Type</span></li>
+		<li class="tw-px-2 tw-py-1">
+			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+		</li>
+		<li class="tw-px-2 tw-py-1">
+			<a href="">Option{{#if optionSum}}<small class="pseudo:parentheses tw-text-xs">999</small>{{/if}}</a>
+		</li>
+	</ul>
+</div>
+{{/if}}
+<!-- Dropdown -->
