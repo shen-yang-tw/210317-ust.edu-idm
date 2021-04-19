@@ -617,13 +617,6 @@ function listShowTab(link, ukTab) {
 // urlShowTab(".border2.uk-tab")
 // listShowTab(".nav_bar .uk-dropdown .uk-nav-sub>li>a", ".border2.uk-tab")
 
-function uikitSvg(logoSvg) {
-  var logo = document.querySelector(logoSvg)
-  UIkit.svg(logo).svg.then(function (svg) {
-    svg.setAttribute("preserveAspectRatio", "xMinYMid")
-    // svg.querySelector('path').style.stroke = 'red'
-  })
-}
 // window.onload = function () {
 //   if (oneExist('.logo>img') == true) {
 //     // console.log("The logo exists")
@@ -863,7 +856,50 @@ const gotoTop = (el, addClassName, scollDownPX, scrollTopPX) => {
 }
 gotoTop("#gototop", "tw-opacity-100", "50", "0")
 
-//------------- End ES5/6 ------------------------------------------------//
+//------------- Uikit ------------------------------------------------//
+
+const uikitSvg = (logoSvg) => {
+  var logo = document.querySelector(logoSvg)
+  UIkit.svg(logo).svg.then((svg) => {
+    svg.setAttribute("preserveAspectRatio", "xMinYMid")
+    // svg.querySelector('path').style.stroke = 'red'
+  })
+}
+uikitSvg("a.logo>img")
+
+// window.onload = () => {
+//   if (oneExist('.logoimg>img') == true) {
+//     // console.log("The logo exists")
+//     uikitSvg(".logoimg>img")
+//   }
+// }
+
+//Slideshow tab focus
+// Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', event)" onkeydown="enterOpenUrl('_blank', event)">Banner1</a> on <ul class="uk-dotnav">
+function slideShowFocus(slideshow, tabsArray, event) {
+  var slideshow = document.querySelector(slideshow)
+  var tabs = document.querySelectorAll(tabsArray)
+  for (var i = 0;i < tabs.length;i++) {
+    // tabs[i] = UIkit.slideshow(slideshow).show(i)
+    if (event.currentTarget == tabs[i]) {
+      UIkit.slideshow(slideshow).show(i)
+    }
+  }
+}
+//Click 'Enter' to open window by the attribute 'href'
+//Or using "event.currentTarget" relpace the "thisKeyDown"
+function enterOpenUrl(targetWindow, event) {
+  if (event.keyCode === 13) {
+    window.open(event.currentTarget.getAttribute('href'), targetWindow)
+  }
+}
+
+
+//------------- /Uikit ------------------------------------------------//
+
+
+//------------- End ES5/6 -------------//
+//--------------------------------------------------------------------------------------------------------------------------//
 
 
 if (oneExist("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty") == true) {

@@ -3,15 +3,15 @@
 
 	<head>
 		{{!-- {{>meta bootstrap='true' bootstrap4='true' jquery='true' editor='true' }} --}}
-		{{>meta othercolors='true' nthu='true' script='true'}}
+		{{>meta othercolors='true' ncu='true' script='true'}}
 	</head>
 
 	<body id="top" {{#if bodyClass}} class="page{{#if bodyFocus}} focus{{/if}}" {{/if}}>
-		{{>header logoRightNav='true' logoSrc='img/nthu-logo.svg' banner='true' bannerSrc='img/banner-nthu.png'}}
+		{{>header logoRightNav='true' logoSrc='img/ncu-logo.svg' banner='true' bannerSrc='img/banner-ncu.jpg'}}
 
 		{{>pageContent userOn='true' account='true' user='陳大天' logout='true' linkLogout='index.html' h2linkBack='true' h2linkBackHref='#' h2linkBackTxt='回上頁' content='login' errorOn='true' error='驗證提示語' loginToHref='#' resetPsw='true' pageTitle='使用者登入'}}
 
-		{{>footer textCenter='true' name='國立清華大學圖書館'}}
+		{{>footer textCenter='true' name='國立中央大學圖書館'}}
 		{{#if jqueryBody}}
 			<!-- jq:js -->
 			<script src="js/jquery.min.js"></script>

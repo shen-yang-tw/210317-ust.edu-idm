@@ -33,7 +33,7 @@ const mode = require('gulp-mode')({
   verbose: false
 });
 
-const uk = true, fa = true, tw = true, bs = false, bs3 = false, jq = false, keepcss = false, onlyscript =true
+const uk = true, fa = true, tw = true, bs = false, bs3 = false, jq = false, keepcss = false, onlyscript = true, othercolors = false, color1 = true, color2 = true
 
 // Paths
 var paths = {
@@ -69,6 +69,10 @@ var paths = {
     scss: 'src/scss/*.scss',
     keepjs: onlyscript ? '!src/js/script.js' : ['!src/js/script.js', '!src/js/-bak*.js', '!src/js/-old*.js', '!src/js/-i*.js'],
     excludejs: ['!src/js/script.js', '!src/js/-bak*.js', '!src/js/-old*.js', '!src/js/-i*.js'],
+    color1html: 'src/ncu-*.html',
+    color2html: 'src/nthu-*.html',
+    color1css: 'src/css/colors-ncu*.css',
+    color2css: 'src/css/colors-nthu*.css',
   },
   dist: {
     root: './dist/',
@@ -80,7 +84,11 @@ var paths = {
     img: 'img',
     fafonts: 'webfonts',
     bs3fonts: 'fonts',
-    vendors: 'libs'
+    vendors: 'libs',
+    color1html: 'dist/ncu-*.html',
+    color2html: 'dist/nthu-*.html',
+    color1css: 'dist/css/colors-ncu*.css',
+    color2css: 'dist/css/colors-nthu*.css',
   }
 }
 
@@ -313,13 +321,20 @@ gulp.task('inject', function() {
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/colors-nthu.css'], {allowEmpty: true}, {
+    .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/colors.css'], {allowEmpty: true}, {
       read: false
     }), {
-      name: 'nthu',
+      name: 'colors',
       relative: true,
       removeTags: true
     }))
+    .pipe(gulpif(othercolors, inject(gulp.src([paths.src.root + paths.dist.css + '/colors-*.css'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
     .pipe(inject(gulp.src([paths.src.root + paths.dist.css + '/style.css'], {allowEmpty: true}, {
       read: false
     }), {
@@ -410,6 +425,28 @@ gulp.task('inject', function() {
     .pipe(gulp.dest(paths.src.root))
   // .pipe(gulp.dest(paths.dist.root))
 });
+gulp.task('inject-color1', function() {
+  return gulp.src(paths.src.color1html)
+    .pipe(gulpif(color1, inject(gulp.src([paths.src.color1css], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.src.root))
+});
+gulp.task('inject-color2', function() {
+  return gulp.src(paths.src.color2html)
+    .pipe(gulpif(color2, inject(gulp.src([paths.src.color2css], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.src.root))
+});
 
 gulp.task('build-inject', function() {
   return gulp.src(paths.dist.html)
@@ -448,13 +485,20 @@ gulp.task('build-inject', function() {
       relative: true,
       removeTags: true
     }))
-    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/colors-nthu*.css'], {allowEmpty: true}, {
+    .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/colors.min.css'], {allowEmpty: true}, {
       read: false
     }), {
-      name: 'nthu',
+      name: 'colors',
       relative: true,
       removeTags: true
     }))
+    .pipe(gulpif(othercolors, inject(gulp.src([paths.dist.root + paths.dist.css + '/colors-*.css'], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
     .pipe(inject(gulp.src([paths.dist.root + paths.dist.css + '/style.min.css'], {allowEmpty: true}, {
       read: false
     }), {
@@ -542,6 +586,28 @@ gulp.task('build-inject', function() {
         return '<script src="' + filepath + '" defer>' + '</script>';
       }
     }))
+    .pipe(gulp.dest(paths.dist.root))
+});
+gulp.task('build-inject-color1', function() {
+  return gulp.src(paths.dist.color1html)
+    .pipe(gulpif(color1, inject(gulp.src([paths.dist.color1css], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
+    .pipe(gulp.dest(paths.dist.root))
+});
+gulp.task('build-inject-color2', function() {
+  return gulp.src(paths.dist.color2html)
+    .pipe(gulpif(color2, inject(gulp.src([paths.dist.color2css], {allowEmpty: true}, {
+      read: false
+    }), {
+      name: 'othercolors',
+      relative: true,
+      removeTags: true
+    })))
     .pipe(gulp.dest(paths.dist.root))
 });
 
@@ -798,12 +864,12 @@ gulp.task('html', gulp.series('delhtml', 'templates', 'deletecss', 'deletejs', '
 gulp.task('start', gulp.series('deletecss', 'deletejs', 'vendors', 'delhtml', 'templates', 'sass', 'js', 'inject'));
 
 //1. Preset then watch
-gulp.task('server', gulp.series('deletecss', 'deletejs', 'vendors', 'tailwind', 'delhtml', 'templates', 'sass', 'inject', 'watch'));
+gulp.task('server', gulp.series('deletecss', 'deletejs', 'vendors', 'tailwind', 'delhtml', 'templates', 'sass', 'inject', 'inject-color1', 'inject-color2', 'watch'));
 
 //3. Prepare all assets for production, run: 'yarn build-nohtml' or 'yarn build'
 gulp.task('build-nohtml', gulp.series('deletecss', 'deletejs', 'vendors', 'tocss', 'js', 'img'));
-gulp.task('build-purge', gulp.series('dist', 'clean', 'deletecss', 'deletejs', 'vendors', 'tailwind', 'tailwind-purge', 'delhtml', 'templates', 'js', 'tocss', 'img', 'inject', 'build-inject'));
-gulp.task('build', gulp.series('dist', 'clean', 'deletecss', 'deletejs', 'vendors', 'tailwind-build', 'delhtml', 'templates', 'js', 'tocss', 'img', 'inject', 'build-inject'));
+gulp.task('build-purge', gulp.series('dist', 'clean', 'deletecss', 'deletejs', 'vendors', 'tailwind', 'tailwind-purge', 'delhtml', 'templates', 'js', 'tocss', 'inject', 'inject-color1', 'inject-color2', 'img', 'build-inject', 'build-inject-color1', 'build-inject-color2'));
+gulp.task('build', gulp.series('dist', 'clean', 'deletecss', 'deletejs', 'vendors', 'tailwind-build', 'delhtml', 'templates', 'js', 'tocss', 'inject', 'inject-color1', 'inject-color2', 'img', 'build-inject', 'build-inject-color1', 'build-inject-color2'));
 
 //--- 0.First run: 'gulp start'
 //--- 1.For development run: 'gulp server' or 'yarn server'

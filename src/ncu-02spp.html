@@ -10,14 +10,14 @@
 		<meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
 		<title>臺灣聯合大學-系統登入服務</title>
 		<link rel="stylesheet" href="css/uikit.min.css">
-		<link rel="stylesheet" href="css/tailwind.min.css">
+		<link rel="stylesheet" href="css/tailwind.css">
 		<link rel="stylesheet" href="css/fontawesome.min.css">
-		<link rel="stylesheet" href="css/main.min.css">
-		<link rel="stylesheet" href="css/colors-nthu.min.css">
-		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/colors-ncu.css">
+		<link rel="stylesheet" href="css/style.css">
 		<script src="js/uikit.min.js"></script>
 		<script src="js/uikit-icons.min.js"></script>
-		<script src="js/script.min.js" defer></script>
+		<script src="js/script.js" defer></script>
 	</head>
 
 	<body id="top" >
@@ -33,7 +33,7 @@
 								<div class="logo">
 									<h1 class="tw-m-0 uk-flex uk-flex-middle">
 										<a class="logo" href="index.html" title="臺灣聯合大學-系統登入服務">
-											<img class="max_width-2/3@m uk-preserve" data-src="img/nthu-logo.svg" data-width data-height alt="臺灣聯合大學-系統登入服務" uk-img uk-svg>
+											<img class="max_width-2/3@m uk-preserve" data-src="img/ncu-logo.svg" data-width data-height alt="臺灣聯合大學-系統登入服務" uk-img uk-svg>
 										</a>
 									</h1>
 								</div>
@@ -57,7 +57,7 @@
 					<!-- /logo & sideLinks -->
 				</nav>
 			</div>
-			<div class="min_height-100 min_height-200@m m:tw-mb-6 uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src="img/banner-nthu.png" uk-img>
+			<div class="min_height-100 min_height-200@m m:tw-mb-6 uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src="img/banner-ncu.jpg" uk-img>
 				<h2 class="tw-w-full tw-relative tw-text-center tw-p-2 tw-m-0 tw-text-xl tw-font-bold">
 					<div class="tw-opacity-70 tw-text-black tw-bg-gradient-to-r tw-from-transparent tw-via-white tw-to-transparent uk-position-cover"></div>
 					<div class="tw-relative">
@@ -75,8 +75,8 @@
 		    <!-- Breadcrumb & User -->
 		    <div class="tw-px-2 tw-mb-2 tw-justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid>
 		        <div class="tw-text-xs m:tw-text-sm content-center tw-m-0">
-		          <span class="tw-mr-2 uk-width-auto">帳號：<span class="ac">陳大天</span></span>
-		          <a class="color_primary-text! uk-width-auto" href="index.html">登出</a>
+		          <span class="tw-mr-2 uk-width-auto">讀者證號：<span class="id color_primary-text">12345</span></span>
+		          <span class="tw-mr-2 uk-width-auto">讀者姓名：<span class="name color_primary-text">陳大天</span></span>
 		        </div>
 		    </div>
 		    <!-- /Breadcrumb & User -->
@@ -88,37 +88,17 @@
 		        <div class="uk-width-expand@m">
 		          <h2 class="tw-border-b tw-border-solid tw-text-base s:tw-text-2xl mt-0">
 		            <div class="tw-justify-between uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
-		              <div class="uk-width-expand">使用者登入</div>
+		              <div class="uk-width-expand">借還權益啟用-讀者權益聲明書</div>
 		                <div class="uk-flex uk-flex-middle uk-width-auto"><small><a class="tw-no-underline" href="#"><i class="tw-mr-1 fas fa-angle-left"></i>回上頁</a></small></div>
 		            </div>
 		          </h2>
 		          <!-- content -->
 		            <div id="content">
-		              
-		              <form onsubmit="return false;">
-		                <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
-		                  <div class="tw-space-y-1 min_width-1/2!@s">
-		                    <label class="w-full" for="acc">帳 號</label>
-		                    <input id="acc" class="uk-input" type="email" placeholder="">
-		                      <p class="color_primary-text s:mt-1 tw-text-small">驗證提示語</p>
-		                  </div>
-		                  <div class="tw-space-y-1 min_width-1/2!@s">
-		                    <label class="w-full" for="paw">密 碼</label>
-		                    <input id="paw" class="uk-input" type="password" placeholder="">
-		                      <p class="color_primary-text s:mt-1 tw-text-small">驗證提示語</p>
-		                  </div>
-		                  <div class="m:mt-2 mx-auto uk-width-1-1">
-		                    <div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
-		                      <div class="tw-space-y-1 tw-text-nowrap">
-		                        <a href="#" class="btn_primary tw-w-full uk-button uk-button-primary">登入</a>
-		                      </div>
-		                        <div class="tw-space-y-1 tw-text-nowrap">
-		                          <a href="#" class="btn_grey-200 tw-w-full uk-button uk-button-primary">重設密碼</a>
-		                        </div>
-		                    </div>
-		                  </div>
-		                </div>
-		              </form>            </div>
+		              <p>
+		                各位新讀者，歡迎您 :<br>
+		              為讓您充分了解本館入館閱覽與借閱館藏資料規定，並確認您個人聯絡資料的正確性，以確保您成功收到本館發出的各項通知電子郵件，在您首次使用服務前，請您先簽署「國立清華大學圖書館讀者權益聲明書」，完成後即可開始使用各項服務。本館實施圖書催還制度，<strong class="color_primary-text">如您借出的圖書有人預約，則您的借期將被縮短為14天</strong>；若您是預約者，在預約保留期限內未到館辦理借書，將累計停權罰則。所有借閱通知均會傳送至您的電子郵件信箱，為確保您的權益，請務必詳閱本館規則，並留下有效的電子郵件信箱。
+		              </p>
+		              <a href="nthu-02sppform.html" class="btn_primary tw-w-full uk-button uk-button-primary">開始簽署</a>            </div>
 		          <!-- /content -->
 		        </div>
 		        <!-- /right column -->
@@ -138,7 +118,7 @@
 						<footer class="tw-text-sm uk-flex-top uk-grid uk-grid-divider uk-grid-small uk-child-width-expand@m" uk-grid>
 							<div uk-margin>
 								<div class="uk-flex-center uk-text-center uk-grid" uk-grid uk-margin>
-									<div><strong>國立清華大學圖書館</strong></div>
+									<div><strong>國立中央大學圖書館</strong></div>
 									<div>本館地址：30010 新竹市大學路1001號</div>
 									<div>電話：03-5712121*52636、52658</div>
 									<div class="uk-width-1-1">本網站之所有圖文內容為國立陽明交通大學圖書館版權所有，請勿任意轉錄或擷取使用</div>

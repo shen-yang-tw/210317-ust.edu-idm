@@ -1,4 +1,4 @@
-@import 'variables', 'colors-variables', 'color', 'mixin', 'functions', 'ncu';
+@import 'variables', 'colors-variables', 'color-ncu', 'mixin', 'functions';
 // @import 'ncu';
 
 @include color($selector:#{$text-color-primary}, $prefix:"a", $color:$color-primary);
