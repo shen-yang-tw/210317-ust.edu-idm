@@ -2,16 +2,16 @@
 <html class="tw-text-m" lang="zh-Hant">
 
 	<head>
-		{{!-- {{>meta bootstrap='true' bootstrap4='true' jquery='true' editor='true' }} --}}
-		{{>meta othercolors='true' nthu='true' script='true'}}
+		{{!-- {{>meta bootstrap=true bootstrap4=true jquery=true editor=true }} --}}
+		{{>meta othercolors=true nthu=true script=true}}
 	</head>
 
 	<body id="top" {{#if bodyClass}} class="page{{#if bodyFocus}} focus{{/if}}" {{/if}}>
-		{{>header logoRightNav='true' logoSrc='img/nthu-logo.svg' banner='true' bannerSrc='img/banner-nthu.png'}}
+		{{>header logoRightNav=true logoSrc='img/nthu-logo.svg' banner=true bannerSrc='img/banner-nthu.png'}}
 
-		{{>pageContent userOn='true' account='true' user='陳大天' logout='true' linkLogout='index.html' h2linkBack='true' h2linkBackHref='#' h2linkBackTxt='回上頁' content='login' errorOn='true' error='驗證提示語' loginToHref='#' resetPsw='true' pageTitle='使用者登入'}}
+		{{>pageContent pageTitle='使用者登入' userOn=false account=false user='陳大天' logout=false linkLogout='index.html' h2linkBack=false h2linkBackHref='#' h2linkBackTxt='回上頁' content='login' stack=true stackClass='uk-width-1-2@s' errorOn=false error='驗證提示語' loginToHref='#' resetPsw=false optionLinks=true btmNote=true loginNote='nthu-loginNote'}}
 
-		{{>footer textCenter='true' name='國立清華大學圖書館'}}
+		{{>footer textCenter=true name='國立清華大學圖書館'}}
 		{{#if jqueryBody}}
 			<!-- jq:js -->
 			<script src="js/jquery.min.js"></script>

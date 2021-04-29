@@ -1,4 +1,4 @@
-{{!-- {{>header shadow='true' hrefForAA='true' topNav='true' textSize='true' logoRightNav='true' mainMenu='true' 01active='true' tw-borderHR='true' iconLogin='true' modal='true'}} --}}
+{{!-- {{>header shadow=true hrefForAA=true topNav=true textSize=true logoRightNav=true mainMenu=true 01active=true tw-borderHR=true iconLogin=true modal=true}} --}}
 
 <!-- header -->
 
@@ -171,15 +171,15 @@
 		<hr class="tw-border-black tw-border-tw-opacity-25 tw-m-0">
 		{{/if}}
 	</div>
-	{{>offcanvas titleIsLink='true'}}
+	{{>offcanvas titleIsLink=true}}
 </header>
 
 {{#if iconLogin}}
-{{>modal-login id='login' modal-title='會員登入' errorOn='true' error='驗證提示語' note='true' noteText='登入說明' register='true'}}
+{{>modal-login id='login' modal-title='會員登入' errorOn=true error='驗證提示語' note=true noteText='登入說明' register=true}}
 
-{{>modal-register id='register' modal-title='會員註冊' errorOn='true' error='驗證提示語'}}
+{{>modal-register id='register' modal-title='會員註冊' errorOn=true error='驗證提示語'}}
 
-{{>modal-password id='password' modal-title='修改密碼' errorOn='true' error='驗證提示語' note='true' noteText='密碼規則說明' resetButton='true' resetButtonName='重　　填'}}
+{{>modal-password id='password' modal-title='修改密碼' errorOn=true error='驗證提示語' note=true noteText='密碼規則說明' resetButton=true resetButtonName='重　　填'}}
 {{/if}}
 
 {{#if modal}}

@@ -1,4 +1,4 @@
-{{!-- {{>pageContent containerXlarge='true' breadcrumb='true' breadcrumbCurrent='查詢列表' BreadcrumbUserVisibleOnDesk='true' userOn='true' user='陳大天' linkLogout='index.html' hrefForAA='true' leftMenu='true' leftMenuTop='true' leftMenuTopStyle='margin-top:15px' leftMenuTab='true' leftMenuTitle='true' leftMenuTitleClasses='' leftMenuTitleName='' leftMenu1level='true' listMenuMaxHeight='true' pageTitle='查詢列表' h2linkBack='true' h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile='true' h2buttonMobileClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' h2buttonName='次選單' h2buttonDropdown='true' content='searchlist' pageSelect='true' pageSum='2'}} --}}
+{{!-- {{>pageContent containerXlarge=true breadcrumb=true breadcrumbCurrent='查詢列表' BreadcrumbUserVisibleOnDesk=true userOn=true user='陳大天' linkLogout='index.html' hrefForAA=true leftMenu=true leftMenuTop=true leftMenuTopStyle='margin-top:15px' leftMenuTab=true leftMenuTitle=true leftMenuTitleClasses='' leftMenuTitleName='' leftMenu1level=true listMenuMaxHeight=true pageTitle='查詢列表' h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile=true h2buttonMobileClasses='btn_primary mt-2 uk-button uk-button-small uk-button-primary' h2buttonName='次選單' h2buttonDropdown=true content='searchlist' pageSelect=true pageSum='2'}} --}}
 
 <!-- page main content -->
 <section class="tw-p-0 tw-py-2 tw-relative" uk-height-viewport="expand: true">
@@ -65,13 +65,13 @@
               <p class="tw-border-b tw-border-solid{{leftMenuTitleClasses}}">{{leftMenuTitleName}}</p>
             {{/if}}
             {{#if leftMenu1level}}
-              {{>listMenu listMenuVisibleOnDesktop='true' widthFullMobile='true' titleIsLink='true' 1level='true' optionSum='true' more='true'}}
+              {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 1level=true optionSum=true more=true}}
             {{/if}}
             {{#if leftMenu2level}}
-              {{>listMenu listMenuVisibleOnDesktop='true' widthFullMobile='true' titleIsLink='true' 2level='true' optionSum='true' more='true'}}
+              {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 2level=true optionSum=true more=true}}
             {{/if}}
             {{#if leftMenu3level}}
-              {{>listMenu listMenuVisibleOnDesktop='true' widthFullMobile='true' titleIsLink='true' 3level='true' optionSum='true' more='true'}}
+              {{>listMenu listMenuVisibleOnDesktop=true widthFullMobile=true titleIsLink=true 3level=true optionSum=true more=true}}
             {{/if}}
           </div>
           <!-- /left menu -->
@@ -108,7 +108,7 @@
                     {{>dropdown}}
                   {{/if}}
                   {{#if h2buttonDropdownSum}}
-                    {{>dropdown optionSum='true'}}
+                    {{>dropdown optionSum=true}}
                   {{/if}}
                   {{#if h2buttonDropdownCheckbox}}
                     {{>dropdownCheckbox}}

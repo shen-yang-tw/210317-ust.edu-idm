@@ -74,10 +74,6 @@
 		  <div class="container_responsive@s uk-container">
 		    <!-- Breadcrumb & User -->
 		    <div class="tw-px-2 tw-mb-2 tw-justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid>
-		        <div class="tw-text-xs m:tw-text-sm content-center tw-m-0">
-		          <span class="tw-mr-2 uk-width-auto">帳號：<span class="ac">陳大天</span></span>
-		          <a class="color_primary-text! uk-width-auto" href="index.html">登出</a>
-		        </div>
 		    </div>
 		    <!-- /Breadcrumb & User -->
 		    <!-- uk-card -->
@@ -89,34 +85,96 @@
 		          <h2 class="tw-border-b tw-border-solid tw-text-base s:tw-text-2xl mt-0">
 		            <div class="tw-justify-between uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
 		              <div class="uk-width-expand">使用者登入</div>
-		                <div class="uk-flex uk-flex-middle uk-width-auto"><small><a class="tw-no-underline" href="#"><i class="tw-mr-1 fas fa-angle-left"></i>回上頁</a></small></div>
 		            </div>
 		          </h2>
 		          <!-- content -->
 		            <div id="content">
 		              
 		              <form onsubmit="return false;">
-		                <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
-		                  <div class="tw-space-y-1 min_width-1/2!@s">
+		                <div class="uk-grid uk-grid-small uk-flex-column" uk-grid>
+		                  <div class="tw-space-y-1 tw-mx-auto uk-width-1-2@s">
 		                    <label class="w-full" for="acc">帳 號</label>
 		                    <input id="acc" class="uk-input" type="email" placeholder="">
-		                      <p class="color_primary-text s:mt-1 tw-text-small">驗證提示語</p>
 		                  </div>
-		                  <div class="tw-space-y-1 min_width-1/2!@s">
+		                  <div class="tw-space-y-1 tw-mx-auto uk-width-1-2@s">
 		                    <label class="w-full" for="paw">密 碼</label>
 		                    <input id="paw" class="uk-input" type="password" placeholder="">
-		                      <p class="color_primary-text s:mt-1 tw-text-small">驗證提示語</p>
 		                  </div>
-		                  <div class="m:mt-2 mx-auto uk-width-1-1">
-		                    <div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
-		                      <div class="tw-space-y-1 tw-text-nowrap">
+		                  <div class="m:mt-2 tw-mx-auto uk-width-1-1">
+		                    <div class="uk-grid uk-grid-small uk-flex-column" uk-grid>
+		                      <div class="tw-space-y-1 tw-mx-auto uk-width-1-2@s">
 		                        <a href="#" class="btn_primary tw-w-full uk-button uk-button-primary">登入</a>
 		                      </div>
-		                        <div class="tw-space-y-1 tw-text-nowrap">
-		                          <a href="#" class="btn_grey-200 tw-w-full uk-button uk-button-primary">重設密碼</a>
-		                        </div>
 		                    </div>
-		                  </div>
+		                    <div class="uk-grid uk-grid-small uk-grid-divider uk-flex-center uk-child-width-auto" uk-grid>
+		                      <div><a class="color_primary-text link_line" href="#">修改個人資料</a></div>
+		                      <div><a class="color_primary-text link_line" href="#">修改密碼</a></div>
+		                      <div><a class="color_primary-text link_line" href="#">重設密碼</a></div>
+		                    </div>
+		                    <!-- list -->
+		                    <ul class="list_decimal_ch tw-space-y-8 tw-mt-8">
+		                      <li>
+		                        <span class="tw-font-bold tw-text-black">有中大Portal帳號讀者登入說明</span>
+		                        <table class="tw-my-2 uk-table uk-table-small uk-table-striped uk-table-responsive">
+		                          <thead>
+		                            <tr>
+		                              <th class="tw-border tw-border-solid uk-table-shrink uk-text-nowrap">讀者類型</th>
+		                              <th class="tw-border tw-border-solid uk-table-shrink uk-text-nowrap">帳號及密碼</th>
+		                            </tr>
+		                          </thead>
+		                          <tbody>
+		                            <tr>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">讀者類型</span>中大教職員工及學生</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">帳號及密碼</span>請使用Portal 帳號及密碼登入</td>
+		                            </tr>
+		                          </tbody>
+		                        </table>
+		                        <p class="tw-m-0">※Portal帳號忘記密碼時，請利用「<a class="color_primary-text" href="#">Portal忘記密碼</a>」功能，或洽詢電算中心Service Desk分機57555、57566。</p>
+		                      </li>
+		                      <li>
+		                        <span class="tw-font-bold tw-text-black">無中大Portal帳號讀者登入說明</span>
+		                        <table class="tw-my-2 uk-table uk-table-small uk-table-striped uk-table-responsive">
+		                          <thead>
+		                            <tr>
+		                              <th class="tw-border tw-border-solid uk-table-shrink uk-text-nowrap">讀者類型</th>
+		                              <th class="tw-border tw-border-solid uk-table-shrink uk-text-nowrap">圖書館帳號規則</th>
+		                              <th class="tw-border tw-border-solid uk-table-shrink uk-text-nowrap">預設密碼</th>
+		                            </tr>
+		                          </thead>
+		                          <tbody>
+		                            <tr>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">讀者類型</span>中大校友借書證</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">圖書館帳號規則</span>校友證上的學號</td>
+		                              <td class="tw-border tw-border-solid uk-table-middle" rowspan="3"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">預設密碼</span>身分證字號第1碼及末4碼，加出生月日4碼，如身分證字號為A234567890，而生日為8月18日，則密碼為A78900818。</td>
+		                            </tr>
+		                            <tr>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">讀者類型</span>兼任教師、教職眷屬、退休人員、中大之友、圖書館之友、中大壢中教職、其他讀者類型</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">圖書館帳號規則</span>身分證字號(ROC ID number)或居留證號(Alien Resident Certificate)的第1碼及4~9碼，如身分證字號為A234567890，帳號為A456789。</td>
+		                            </tr>
+		                            <tr>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">讀者類型</span>教師長期借閱</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">圖書館帳號規則</span>個人Portal 帳號加長期流水號，如個人Portal 帳號為A456789，而長期借閱流水號為◯◯，則長期借閱帳號為A456789◯◯。</td>
+		                            </tr>
+		                            <tr>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">讀者類型</span>訪問學者、訪問學生、語言中心華語生</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">圖書館帳號規則</span>無居留證號者，使用本校各單位(如國際處、語言中心)給的編號為帳號，如VT109112001。</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">預設密碼</span>本校編號前5碼，加出生月日4碼，如生日為12月31日，則密碼為VT1091231。如未登錄生日者，則統一在編號前5碼後加1234，密碼VT1091234。</td>
+		                            </tr>
+		                            <tr>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">讀者類型</span>館際合作借書證(館合證)</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">圖書館帳號規則</span>館合證編號第1~4碼及6~10碼，如編號NCU4567890，則登入帳號為NCU467890。</td>
+		                              <td class="tw-border tw-border-solid"><span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">預設密碼</span>密碼同館合證編號</td>
+		                            </tr>
+		                          </tbody>
+		                        </table>
+		                        <ul class="tw-pl-6 tw-list-decimal">
+		                          <li>您也可以用「忘記密碼」取得新密碼。</li>
+		                          <li>為了維護您個人資料安全，首次登入本系統，請務必立即更改密碼，並妥善保存。</li>
+		                          <li>登入問題請洽總圖借還書櫃台，聯絡電話：(03)4227151分機57417，或寄信至<a class="color_primary-text" href="mailto:cirlib@ncu.edu.tw">cirlib@ncu.edu.tw</a>。</li>
+		                        </ul>
+		                      </li>
+		                    </ul>
+		                    <!-- /list -->    </div>
 		                </div>
 		              </form>            </div>
 		          <!-- /content -->

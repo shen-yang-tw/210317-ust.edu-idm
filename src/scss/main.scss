@@ -231,7 +231,7 @@ $hover-brand-bg:"bg_facebook" $facebook, "bg_twitter" $twitter, "bg_googleplus" 
   @include list-counter($reset:true);
   &>li:before {@include list-counter($display:inline-block);}
 }
-#{$list-decimal-ch} {list-style-type:cjk-ideographic; padding-left: 30px;}
+#{$list-decimal-ch} {list-style-type:cjk-ideographic; padding-left: 25px;}
 #{$list-decimal-row} {
   @include list-counter($reset:true); @include space($property:padding, $size:0);
   &>li:before {@include list-counter($display:block);}

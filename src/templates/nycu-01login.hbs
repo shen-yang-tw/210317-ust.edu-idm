@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="tw-text-m" lang="zh-Hant">
+
+	<head>
+		{{!-- {{>meta bootstrap=true bootstrap4=true jquery=true editor=true }} --}}
+		{{>meta othercolors=true nycu=true script=true}}
+	</head>
+
+	<body id="top" {{#if bodyClass}} class="page{{#if bodyFocus}} focus{{/if}}" {{/if}}>
+		{{>header logoRightNav=true logoSrc='img/nycu-logo.svg' banner=true bannerSrc='img/banner-nycu.jpg'}}
+
+		{{>pageContent pageTitle='使用者登入' userOn=false account=false user='陳大天' logout=false linkLogout='index.html' h2linkBack=false h2linkBackHref='#' h2linkBackTxt='回上頁' content='login' stack=true stackClass='uk-width-1-2@s' errorOn=false error='驗證提示語' loginToHref='#' resetPsw=false optionLinks=true btmNote=true loginNote='nycu-loginNote'}}
+
+		{{>footer textCenter=true name='國立陽明交通大學圖書館'}}
+		{{#if jqueryBody}}
+			<!-- jq:js -->
+			<script src="js/jquery.min.js"></script>
+			<!-- endinject -->
+		{{/if}}
+		{{#if bootstrapBody}}
+			<!-- bs:js -->
+			<script src="js/bootstrap.min.js"></script>
+			<!-- endinject -->
+		{{/if}}
+	</body>
+
+</html>

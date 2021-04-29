@@ -8,7 +8,7 @@
 // }
 
 .logo>* {
-  min-width: 200px;
+  min-width: 50%;
   max-height: 50px;
   width: calc(1313px/141*70) !important; //Fix Firefox - Original aspact:1313/141, Final needed height:70px, Or fix with the following
 }

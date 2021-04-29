@@ -74,10 +74,6 @@
 		  <div class="container_responsive@s uk-container">
 		    <!-- Breadcrumb & User -->
 		    <div class="tw-px-2 tw-mb-2 tw-justify-between uk-grid uk-grid-small uk-grid-match uk-flex-middle" uk-grid>
-		        <div class="tw-text-xs m:tw-text-sm content-center tw-m-0">
-		          <span class="tw-mr-2 uk-width-auto">帳號：<span class="ac">陳大天</span></span>
-		          <a class="color_primary-text! uk-width-auto" href="index.html">登出</a>
-		        </div>
 		    </div>
 		    <!-- /Breadcrumb & User -->
 		    <!-- uk-card -->
@@ -89,34 +85,58 @@
 		          <h2 class="tw-border-b tw-border-solid tw-text-base s:tw-text-2xl mt-0">
 		            <div class="tw-justify-between uk-flex-middle uk-grid uk-grid-small uk-grid-row-collapse uk-child-width-expand@m" uk-grid>
 		              <div class="uk-width-expand">使用者登入</div>
-		                <div class="uk-flex uk-flex-middle uk-width-auto"><small><a class="tw-no-underline" href="#"><i class="tw-mr-1 fas fa-angle-left"></i>回上頁</a></small></div>
 		            </div>
 		          </h2>
 		          <!-- content -->
 		            <div id="content">
 		              
 		              <form onsubmit="return false;">
-		                <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
-		                  <div class="tw-space-y-1 min_width-1/2!@s">
+		                <div class="uk-grid uk-grid-small uk-flex-column" uk-grid>
+		                  <div class="tw-space-y-1 tw-mx-auto uk-width-1-2@s">
 		                    <label class="w-full" for="acc">帳 號</label>
 		                    <input id="acc" class="uk-input" type="email" placeholder="">
-		                      <p class="color_primary-text s:mt-1 tw-text-small">驗證提示語</p>
 		                  </div>
-		                  <div class="tw-space-y-1 min_width-1/2!@s">
+		                  <div class="tw-space-y-1 tw-mx-auto uk-width-1-2@s">
 		                    <label class="w-full" for="paw">密 碼</label>
 		                    <input id="paw" class="uk-input" type="password" placeholder="">
-		                      <p class="color_primary-text s:mt-1 tw-text-small">驗證提示語</p>
 		                  </div>
-		                  <div class="m:mt-2 mx-auto uk-width-1-1">
-		                    <div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
-		                      <div class="tw-space-y-1 tw-text-nowrap">
+		                  <div class="m:mt-2 tw-mx-auto uk-width-1-1">
+		                    <div class="uk-grid uk-grid-small uk-flex-column" uk-grid>
+		                      <div class="tw-space-y-1 tw-mx-auto uk-width-1-2@s">
 		                        <a href="#" class="btn_primary tw-w-full uk-button uk-button-primary">登入</a>
 		                      </div>
-		                        <div class="tw-space-y-1 tw-text-nowrap">
-		                          <a href="#" class="btn_grey-200 tw-w-full uk-button uk-button-primary">重設密碼</a>
-		                        </div>
 		                    </div>
-		                  </div>
+		                    <div class="uk-grid uk-grid-small uk-grid-divider uk-flex-center uk-child-width-auto" uk-grid>
+		                      <div><a class="color_primary-text link_line" href="#">修改個人資料</a></div>
+		                      <div><a class="color_primary-text link_line" href="#">修改密碼</a></div>
+		                      <div><a class="color_primary-text link_line" href="#">重設密碼</a></div>
+		                    </div>
+		                    <!-- list -->
+		                    <ul class="list_decimal_ch tw-space-y-8 tw-mt-8">
+		                      <li>
+		                        <span class="tw-font-bold tw-text-black">讀者帳號：</span>
+		                        <ul class="tw-pl-6 tw-list-decimal">
+		                          <li>學生請輸入學號；教職員請輸入員工編號。</li>
+		                          <li>其他讀者請輸入圖書館借書證上的條碼號, "-" 不必輸入。</li>
+		                        </ul>
+		                      </li>
+		                      <li>
+		                        <span class="tw-font-bold tw-text-black">讀者密碼：系統預設密碼如下</span>
+		                        <ul class="tw-pl-6 tw-list-decimal">
+		                          <li>本籍讀者：身分證字號，字母需大寫。</li>
+		                          <li>外籍讀者：
+		                            <ul class="tw-pl-4">
+		                              <li>(1)身份證字號(ROC ID number)或居留證號碼(Alien Resident Certificate)</li>
+		                              <li>(2)「學號末六碼+生日」(例 : 學號為106998776，生日為7月31日，密碼預設為9987760731)</li>
+		                            </ul>
+		                          </li>
+		                          <li>您也可以用「忘記密碼」取得新密碼。</li>
+		                          <li>為了維護您個人資料安全，首次登入本系統，請務必立即更改密碼，並請妥慎保管。</li>
+		                        </ul>
+		                      </li>
+		                      <li><span class="tw-font-bold tw-text-black">登入問題請洽總圖借還書櫃台，校內分機42997或電話(03)574-2997。Email:<a class="color_primary-text tw-ml-2" href="mailto:cir@my.nthu.edu.tw">cir@my.nthu.edu.tw</a></span></li>
+		                    </ul>
+		                    <!-- /list -->    </div>
 		                </div>
 		              </form>            </div>
 		          <!-- /content -->
